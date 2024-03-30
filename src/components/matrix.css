@@ -1,0 +1,25 @@
+.matrix-digit {
+    position: absolute;
+    color: rgb(0, 255, 0);
+    font-family: monospace;
+    font-size: 20px;
+    animation: cascade 2s linear forwards;
+}
+@keyframes cascade {
+    0% {
+        opacity: 0;
+        transform: translateY(-100vh) rotateX(0deg);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0) rotateX(360deg);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(0) rotateX(360deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh) rotateX(360deg);
+    }
+}
