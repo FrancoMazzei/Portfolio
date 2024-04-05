@@ -43,23 +43,48 @@ import Card from '../components/header.astro';
 
 		<div id="Sobre-mi" class="bg-fom-mi-hero bg-cover bg-center bg-fixed h-screen">
 			<div class="foto-container">
+				<div class="border"></div>
 				<div class="imagen">
 					<img class="PerF" src="/public/img/FotP.webp">
 				</div>
 			</div>
-			<div class="descripcion">
-				<p>Bienvenidos/as a Código en la Oscuridad, donde el arte y la programación se fusionan en un mundo tenebroso y fascinante. <a href="#modal-contenido" class="leer-mas">Leer más</a></p>
-			</div>
 			
-			<div id="modal-biografia" class="modal">
-				<div class="modal-contenido">
-					<span class="cerrar-modal">&times;</span>
-					<p>Soy Franco, un apasionado de la creación tanto en el ámbito digital como en el analógico. Mi fascinación por lo oscuro se refleja no solo en el diseño de esta página, sino también en mi amor por el arte que evoca emociones intensas y enigmáticas.<br>
-					Como multipotencial, mi curiosidad me ha llevado a explorar diversos campos, desde las finanzas hasta la escriturá, pasando por la botánica. Este eclecticismo se refleja en mis proyectos, donde busco fusionar mi pasión por la programación con mis múltiples intereses.<br>
-					Mi fortaleza reside en el desarrollo front-end, donde puedo dar vida a mis visiones con habilidad y precisión. Sin embargo, también aspiro a adentrarme en el apasionante mundo de la ciberseguridad, donde espero aplicar mis habilidades para proteger y asegurar el mundo digital.</p>
-				</div>
-			</div>
+					<div class="contenedor">
+						<div class="descripcion">
+							<p>Bienvenidos/as a Código en la Oscuridad, donde el arte y la programación se fusionan en un mundo tenebroso y fascinante. <a href="#modal-contenido" class="leer-mas">Leer más</a></p>
+						</div>
 					
+						<div id="modal-biografia" class="modal">
+							<div class="modal-contenido">
+								<span class="cerrar-modal">&times;</span>
+								<p>Soy Franco, un apasionado de la creación tanto en el ámbito digital como en el analógico. Mi fascinación por lo oscuro se refleja no solo en el diseño de esta página, sino también en mi amor por el arte que evoca emociones intensas y enigmáticas.<br>
+								Como multipotencial, mi curiosidad me ha llevado a explorar diversos campos, desde las finanzas hasta la escritura, pasando por la botánica. Este eclecticismo se refleja en mis proyectos, donde busco fusionar mi pasión por la programación con mis múltiples intereses.<br>
+								Mi fortaleza reside en el desarrollo front-end, donde puedo dar vida a mis visiones con habilidad y precisión. Sin embargo, también aspiro a adentrarme en el apasionante mundo de la ciberseguridad, donde espero aplicar mis habilidades para proteger y asegurar el mundo digital.</p>
+							</div>
+						</div>
+
+						<div class="herramientas">
+							<h2>Herramientas que se usar</h2>
+							<div class="grid-imagenes">
+								<div class="imagen herra"><img src="/public/img/HTML.webp"></div>
+								<div class="imagen herra"><img src="/public/img/css.webp"></div>
+								<div class="imagen herra"><img src="/public/img/js.webp"></div>
+								<div class="imagen herra"><img src="/public/img/PS.webp"></div>
+								<div class="imagen herra"><img src="/public/img/Inkscape.webp"></div>
+								<div class="imagen herra"><img src="/public/img/Astro.webp"></div>
+							</div>
+						</div>
+						<div class="herramientas2">
+							<h2>Herramientas que estoy aprendiendo</h2>
+							<div class="grid-imagenes2">
+								<div class="imagen2 herra2"><img src="/public/img/svg.webp"></div>
+							    <div class="imagen2 herra2"><img src="/public/img/animejs.webp"></div>
+							</div>
+						</div>
+
+
+
+					</div>
 
 
 		
@@ -70,20 +95,60 @@ import Card from '../components/header.astro';
 
 <style>
 	.foto-container {
-    max-width: 300px;
-    height: auto; 
-    position: relative; 
-    left: 50px; 
-    bottom: 10%; 
-    transform: translateY(50%); 
-	border-radius: 50%;
+        width: 300px;
+        height: 300px;
+		transform: translateY(50%); 
+		left: 50px; 
+        bottom: 10%; 
+        position: relative;
+        overflow: hidden; 
+        border-radius: 50%;
+    }
+
+    .border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 5px solid transparent;
+        border-top-color: #fff; 
+        border-bottom-color: #fff; 
+        border-radius: 50%;
+        animation: borderMove 6s linear infinite; 
+    }
+
+    @keyframes borderMove {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
     }
 	.PerF {
 		width: 300px;
 		height: 300px;
 		border-radius: 50%;
 	}
-	.descripcion {
+
+
+
+
+
+
+
+
+
+
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;;
+    grid-gap: 20px;
+}
+
+.descripcion {
     max-width: 350px; 
 	/* height: 350px esto es para darme cuenta que el legion d e panes debe estar abajo. quizas es necesario  ponerlo en alguna parte;  */
     position: relative;
@@ -95,21 +160,108 @@ import Card from '../components/header.astro';
 
 
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-contenido {
+    background-color: #000000;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #ffffff;
+    width: 50%;
+}
+
+.cerrar-modal {
+    color: #ffffff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: rgb(173, 115, 166);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.leer-mas {
+    color: rgb(173, 115, 166);
+    cursor: pointer;
+}
 
 
 
+.herramientas {
+    grid-column: 2 / span 1; 
+    position: relative;
+	text-align: center;
+	top: -180px;
+	height: auto;
+}
+
+.grid-imagenes {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);  
+	margin-left: 25%; 
+	margin-top: 25px;
+}
+
+.imagen.herra {
+    width: 80px; 
+    height: auto; 
+}
+.imagen.herra:hover {}
 
 
 
+.herramientas2 {
+    grid-column: 2 / span 1; 
+    position: relative;
+    text-align: center;
+    top: -180px;
+}
+
+.grid-imagenes2 {
+    display: grid;
+    grid-template-columns: repeat(2, 120px); 
+	margin-left: 35%; 
+}
+
+.imagen2.herra2 {
+    width: 80px; 
+    height: auto; 
+}
 
 
+.imagen.herra,
+.imagen2.herra2 {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease; /* Transición suave para la transformación */
+}
+
+.imagen.herra:hover,
+.imagen2.herra2:hover {
+    transform: scale(1.5); /* Aumenta la escala al 110% al pasar el mouse */
+}
 
 
+	
+</style> 
 
+ 
 
-
-
-	.modal {
+	<!-- .modal {
     display: none; 
     position: fixed; 
     z-index: 1; 
@@ -146,12 +298,4 @@ import Card from '../components/header.astro';
 .leer-mas {
     color: rgb(173, 115, 166);
     cursor: pointer;
-}
-
-
-
-
-
-	
-</style> 
-
+}  -->
