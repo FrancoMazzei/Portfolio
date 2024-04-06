@@ -42,21 +42,17 @@ import Card from '../components/header.astro';
 		</div>
 
 		<div id="Sobre-mi" class="bg-fom-mi-hero bg-cover bg-center bg-fixed h-screen">
-			<div class="foto-container">
-				<div class="border"></div>
-				<div class="imagen">
-					<img class="PerF" src="/public/img/FotP.webp">
-				</div>
+            <div class="w-[300px] h-[300px] translate-y-2/4 relative overflow-hidden rounded-[50%] left-[50px] bottom-[10%]">
+				<div class="absolute w-full h-full animate-[borderMove_6s_linear_infinite] rounded-[50%] border-y-white border-[5px] border-solid border-transparent left-0 top-0 "></div>
+					<img class="w-300 h-300 rounded-full" src="/public/img/FotP.webp">
 			</div>
-			
-					<div class="contenedor">
-						<div class="descripcion">
-							<p>Bienvenidos/as a Código en la Oscuridad, donde el arte y la programación se fusionan en un mundo tenebroso y fascinante. <a href="#modal-contenido" class="leer-mas">Leer más</a></p>
+					<div class="grid grid-cols-[1fr_1fr] gap-5">
+						<div class=" max-w-[350px] relative box-border top-[-180px] ml-[380px]">
+							<p>Bienvenidos/as a Código en la Oscuridad, donde el arte y la programación se fusionan en un mundo tenebroso y fascinante. <a href="#modal-contenido" class="leer-mas text-custom-purple-500 cursor-pointer">Leer más</a></p>
 						</div>
-					
-						<div id="modal-biografia" class="modal">
-							<div class="modal-contenido">
-								<span class="cerrar-modal">&times;</span>
+						<div id="modal-biografia" class="hidden fixed z-[1] w-full h-full overflow-auto bg-[rgba(0,0,0,0.5)] left-0 top-0">
+							<div class="bg-[#000000c2] border w-6/12 mx-auto my-[10%] p-5 border-solid border-white">
+								<span class="text-white float-right text-2xl font-bold cerrar-modal hover:text-purple-600 focus:text-purple-600 hover:no-underline focus:no-underline cursor-pointer">&times;</span>
 								<p>Soy Franco, un apasionado de la creación tanto en el ámbito digital como en el analógico. Mi fascinación por lo oscuro se refleja no solo en el diseño de esta página, sino también en mi amor por el arte que evoca emociones intensas y enigmáticas.<br>
 								Como multipotencial, mi curiosidad me ha llevado a explorar diversos campos, desde las finanzas hasta la escritura, pasando por la botánica. Este eclecticismo se refleja en mis proyectos, donde busco fusionar mi pasión por la programación con mis múltiples intereses.<br>
 								Mi fortaleza reside en el desarrollo front-end, donde puedo dar vida a mis visiones con habilidad y precisión. Sin embargo, también aspiro a adentrarme en el apasionante mundo de la ciberseguridad, donde espero aplicar mis habilidades para proteger y asegurar el mundo digital.</p>
@@ -94,7 +90,7 @@ import Card from '../components/header.astro';
 </Layout>
 
 <style>
-	.foto-container {
+	/* .foto-container {
         width: 300px;
         height: 300px;
 		transform: translateY(50%); 
@@ -103,9 +99,8 @@ import Card from '../components/header.astro';
         position: relative;
         overflow: hidden; 
         border-radius: 50%;
-    }
-
-    .border {
+    } */
+    /* .border {
         position: absolute;
         top: 0;
         left: 0;
@@ -116,51 +111,31 @@ import Card from '../components/header.astro';
         border-bottom-color: #fff; 
         border-radius: 50%;
         animation: borderMove 6s linear infinite; 
-    }
-
-    @keyframes borderMove {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-	.PerF {
+    } */
+	/* .PerF {
 		width: 300px;
 		height: 300px;
 		border-radius: 50%;
-	}
+	} */
 
 
-
-
-
-
-
-
-
-
-
-.contenedor {
+/* .contenedor {
     display: grid;
     grid-template-columns: 1fr 1fr;;
     grid-gap: 20px;
-}
-
-.descripcion {
+} */
+/* .descripcion {
     max-width: 350px; 
-	/* height: 350px esto es para darme cuenta que el legion d e panes debe estar abajo. quizas es necesario  ponerlo en alguna parte;  */
     position: relative;
     box-sizing: border-box; 
     margin-left: 380px; 
 	top: -180px
-}
+} */
 
 
 
 
-.modal {
+/* .modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -170,34 +145,30 @@ import Card from '../components/header.astro';
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-contenido {
-    background-color: #000000;
+} */
+/* .modal-contenido {
+    background-color: #000000c2;
     margin: 10% auto;
     padding: 20px;
     border: 1px solid #ffffff;
     width: 50%;
-}
-
-.cerrar-modal {
+} */
+/* .cerrar-modal {
     color: #ffffff;
     float: right;
     font-size: 28px;
     font-weight: bold;
 }
-
 .cerrar-modal:hover,
 .cerrar-modal:focus {
     color: rgb(173, 115, 166);
     text-decoration: none;
     cursor: pointer;
-}
-
-.leer-mas {
+} */
+/* .leer-mas {
     color: rgb(173, 115, 166);
     cursor: pointer;
-}
+} */
 
 
 
@@ -247,55 +218,14 @@ import Card from '../components/header.astro';
 .imagen2.herra2 {
     width: 80px;
     height: auto;
-    transition: transform 0.3s ease; /* Transición suave para la transformación */
+    transition: transform 0.3s ease; 
 }
 
 .imagen.herra:hover,
 .imagen2.herra2:hover {
-    transform: scale(1.5); /* Aumenta la escala al 110% al pasar el mouse */
+    transform: scale(1.5); 
 }
 
 
 	
 </style> 
-
- 
-
-	<!-- .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%;
-    overflow: auto; 
-    background-color: rgba(0, 0, 0, 0.5); 
-}
-
-.modal-contenido {
-    background-color: #000000;
-    margin: 10% auto; 
-    padding: 20px;
-    border: 1px solid #ffffff;
-    width: 50%; 
-}
-
-.cerrar-modal {
-    color: #ffffff;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.cerrar-modal:hover,
-.cerrar-modal:focus {
-    color: rgb(173, 115, 166);
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.leer-mas {
-    color: rgb(173, 115, 166);
-    cursor: pointer;
-}  -->
