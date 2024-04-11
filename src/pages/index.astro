@@ -8,10 +8,10 @@ import Card from '../components/header.astro';
 <Layout title="Hola wei">
 	<main>
 		<div id="Inicio" class="bg-gradient-hero bg-cover bg-center bg-fixed h-screen">	
-			<header class="flex justify-between fixed w-screen">
+			<header class="flex justify-between fixed w-screen z-50 top-1 ">
 				<div>
 					<a href="#Inicio">
-						<img class="w-16 h-16 top-0" src="/public/img/Log.webp">
+						<img class="w-16 h-16" src="/public/img/Log.webp">
 					</a>
 				</div>
 				<nav class="mr-8 mt-1 text-base">
@@ -20,16 +20,13 @@ import Card from '../components/header.astro';
 							<a href="#Inicio" class="no-underline">Inicio</a>
 						</li>
 						<li class="inline-block ml-10">
-							<a href="#Sobre-mi" class="no-underline">Sobre mi</a>
+							<a href="#Sobre-mi" class="no-underline">Sobre mí</a>
 						</li>
 						<li class="inline-block ml-10">
 							<a href="#Herramientas" class="no-underline">Herramientas</a>
 						</li>
 						<li class="inline-block ml-10">
-							<a href="#" class="no-underline">Proyecto</a>
-						</li>
-						<li class="inline-block ml-10">
-							<a href="#" class="no-underline">Contacto</a>
+							<a href="#" class="no-underline">Proyectos</a>
 						</li>
 					</ul>
 				</nav>		
@@ -43,10 +40,10 @@ import Card from '../components/header.astro';
 		<div id="Sobre-mi" class="bg-fom-mi-hero bg-cover bg-center bg-fixed h-screen">
             <div class="w-[300px] h-[300px] translate-y-2/4 relative overflow-hidden rounded-[50%] left-[50px] bottom-[10%]">
 				<div class="absolute w-full h-full animate-[borderMove_6s_linear_infinite] rounded-[50%] border-y-white border-[5px] border-solid border-transparent left-0 top-0 "></div>
-					<img class="w-300 h-300 rounded-full" src="/public/img/FotP.webp">
+					<img class="w-300 h-300 rounded-full" src="/public/img/Fotp.webp">
 			</div>
-					<div class="grid grid-cols-[1fr_1fr] gap-5">
-						<div class=" max-w-[350px] relative box-border top-[-180px] ml-[380px]">
+					<div class="grid grid-cols-[1fr_1fr] gap-5 h-[350px]">
+						<div class="max-w-[350px] relative box-border top-[-180px] ml-[380px]">
 							<p>Bienvenidos/as a Código en la Oscuridad, donde el arte y la programación se fusionan en un mundo tenebroso y fascinante. <a href="#modal-contenido" class="leer-mas text-custom-purple-500 cursor-pointer">Leer más</a></p>
 						</div>
 						<div id="modal-biografia" class="hidden fixed z-[1] w-full h-full overflow-auto bg-[rgba(0,0,0,0.5)] left-0 top-0">
@@ -58,7 +55,7 @@ import Card from '../components/header.astro';
 							</div>
 						</div>
 						<div class="col-[2_/_span_1] relative text-center top-[-180px] h-auto">
-							<h2>Herramientas que se usar</h2>
+							<h2>Herramientas que sé usar</h2>
 							<div class="grid grid-cols-[repeat(3,120px)] ml-[25%] mt-[25px]">
 								<div class="group w-20 h-auto transition-transform ease-in-out duration-300 transform hover:scale-125"><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank"><img src="/public/img/HTML.webp"></a></div>
 								<div class="group w-20 h-auto transition-transform ease-in-out duration-300 transform hover:scale-125"><a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank"><img src="/public/img/css.webp"></a></div>
@@ -77,10 +74,228 @@ import Card from '../components/header.astro';
 						</div>
 					</div>
 
-					<div id="Herramientas">
-						<h2 class="part3">Herramientas</h2>
-						
+					<div id="Herramientas" class="bg-her-hero bg-cover bg-center bg-fixed h-screen">
 
+						<div class="mx-auto px-20 py-5">
+							<div class="border-b-2 border-b-white border-solid">
+							    <div class="faq_question">
+								    <div class="faq_question-text">
+								        <h3>HTML</h3>
+								    </div>
+								<div class="icon">
+								    <div class="icon-shape"></div>
+								</div>
+							  </div>
+							  <div class="answercont">
+								<div class="answer">
+									<ul class="custom-list">
+										<li>Estructurar correctamente la página web, usando etiquetas como 
+											<span class="text-customOrange font-bold">&lt;</span>html<span class="text-customOrange font-bold">&gt;</span>,
+											<span class="text-customOrange font-bold">&lt;</span>head<span class="text-customOrange font-bold">&gt;</span>,
+											<span class="text-customOrange font-bold">&lt;</span>title<span class="text-customOrange font-bold">&gt;</span>y
+											<span class="text-customOrange font-bold">&lt;</span>body<span class="text-customOrange font-bold">&gt;</span>.</li><br>
+										<li>Crear contenido utilizando las etiquetas de semántica adecuadas, como 
+											<span class="text-customOrange font-bold">&lt;</span>header<span class="text-customOrange font-bold">&gt;</span>, 
+											<span class="text-customOrange font-bold">&lt;</span>nav<span class="text-customOrange font-bold">&gt;</span>, 
+											<span class="text-customOrange font-bold">&lt;</span>section<span class="text-customOrange font-bold">&gt;</span>, 
+											<span class="text-customOrange font-bold">&lt;</span>article<span class="text-customOrange font-bold">&gt;</span>, 
+											<span class="text-customOrange font-bold">&lt;</span>aside<span class="text-customOrange font-bold">&gt;</span>, 
+											<span class="text-customOrange font-bold">&lt;</span>footer<span class="text-customOrange font-bold">&gt;</span>.</li><br>
+										<li>Utilizar elementos multimedia, 
+											<span class="text-customOrange font-bold">&lt;</span>img<span class="text-customOrange font-bold">&gt;</span>, 
+											<span class="text-customOrange font-bold">&lt;</span>video<span class="text-customOrange font-bold">&gt;</span>, 
+											<span class="text-customOrange font-bold">&lt;</span>audio<span class="text-customOrange font-bold">&gt;</span>, 
+											entre otros, para enriquecer la experiencia del usuario.</li><br>
+										<li>Establecer enlaces y navegaciÓn, como 
+											<span class="text-customOrange font-bold">&lt;</span>a<span class="text-customOrange font-bold">&gt;</span> y externos como
+											<span class="font-bold text-customOrange">&lt;</span>a target=<span class="text-customOrange"> "</span>_blank<span class="text-customOrange">"
+											</span><span class="font-bold text-customOrange">&gt;</span> para permitir que los usuarios naveguen cómodamente sin salir de la página.</li><br>
+										<li>Utilizar tablas y listas como
+											<span class="text-customOrange font-bold">&lt;</span>table<span class="text-customOrange font-bold">&gt;</span>,
+											<span class="text-customOrange font-bold">&lt;</span>tr<span class="text-customOrange font-bold">&gt;</span>,
+											<span class="text-customOrange font-bold">&lt;</span>td<span class="text-customOrange font-bold">&gt;</span>,
+											<span class="text-customOrange font-bold">&lt;</span>th<span class="text-customOrange font-bold">&gt;</span>,
+											<span class="text-customOrange font-bold">&lt;</span>ul<span class="text-customOrange font-bold">&gt;</span>,
+											<span class="text-customOrange font-bold">&lt;</span>ol<span class="text-customOrange font-bold">&gt;</span> y
+											<span class="text-customOrange font-bold">&lt;</span>li<span class="text-customOrange font-bold">&gt;</span>
+											para organizar datos en tablas y listas de manera estructurada y legible.</li><br>
+										<li>Crear formularios (<span class="text-customOrange font-bold">&lt;</span>form<span class="text-customOrange font-bold">&gt;</span>)
+											interactivos con campos de entrada de texto, áreas de texto, botones, casillas de verificación
+											(<span class="text-customOrange font-bold">&lt;</span>input type=<span class="text-customPink">'</span>checkbox<span class="text-customPink">'
+											</span><span class="font-bold text-customOrange">></span>), botones de radio (<span class="text-customOrange font-bold">&lt;</span>input type=<span class="text-customPink">'
+											</span>radio<span class="text-customPink">'</span><span class="font-bold text-customOrange">></span>), menús desplegables (<span class="text-customOrange font-bold">&lt;</span>select<span class="font-bold text-customOrange">>
+											</span>), y otros elementos para recopilar información del usuario.</li><br>
+										<li>Agregar meta etiquetas
+											(<span class="text-customOrange font-bold">&lt;</span>meta<span class="text-customOrange font-bold">&gt;</span>)
+											para proporcionar información sobre la página, como el autor, la descripción, y las palabras clave, así como para controlar el comportamiento de los motores de búsqueda y las redes sociales.</li><br>
+										<li>Usar los atributos y técnicas HTML para mejorar la accesibilidad de la página web.</li><br>
+										<li>Integración con CSS, JS y otras herramientas.</li><br>
+										<li>Mantenimiento y actualizaciones.</li>
+									</ul>
+								</div>
+							  </div>
+							</div>
+							<div class="faq_container ">
+							  <div class="faq_question">
+								<div class="faq_question-text">
+								  <h3>css</h3>
+								</div>
+								<div class="icon">
+								  <div class="icon-shape"></div>
+								</div>
+							  </div>
+							  <div class="answercont">
+								<div class="answer">
+								  <ul class="custom-list">
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								  </ul>
+								</div>
+							  </div>
+							</div>
+							<div class="faq_container">
+							  <div class="faq_question">
+								<div class="faq_question-text">
+								  <h3>JavaScript</h3>
+								</div>
+								<div class="icon">
+								  <div class="icon-shape"></div>
+								</div>
+							  </div>
+							  <div class="answercont">
+								<div class="answer">
+								  <ul class="custom-list">
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								  </ul>
+								</div>
+							  </div>
+							</div>
+							<div class="faq_container">
+							  <div class="faq_question">
+								<div class="faq_question-text">
+								  <h3>Astro (framework)</h3>
+								</div>
+								<div class="icon">
+								  <div class="icon-shape"></div>
+								</div>
+							  </div>
+							  <div class="answercont">
+								<div class="answer">
+								  <ul class="custom-list">
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								  </ul>
+								</div>
+							  </div>
+							</div>
+							<div class="faq_container">
+							  <div class="faq_question">
+								<div class="faq_question-text">
+								  <h3>Photoshop</h3>
+								</div>
+								<div class="icon">
+								  <div class="icon-shape"></div>
+								</div>
+							  </div>
+							  <div class="answercont">
+								<div class="answer">
+								  <ul class="custom-list">
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								  </ul>
+								</div>
+							  </div>
+							</div>
+							<div class="faq_container">
+								<div class="faq_question">
+								  <div class="faq_question-text">
+									<h3>InksCape</h3>
+								  </div>
+								  <div class="icon">
+									<div class="icon-shape"></div>
+								  </div>
+								</div>
+								<div class="answercont">
+								  <div class="answer">
+									<ul class="custom-list">
+									  <li></li>
+									  <li></li>
+									  <li></li>
+									  <li></li>
+									  <li></li>
+									  <li></li>
+									  <li></li>
+									</ul>
+								  </div>
+								</div>
+							  </div>  
+							  <div class="faq_container">
+								<div class="faq_question">
+								  <div class="faq_question-text">
+									<h3>Anime.js</h3>
+								  </div>
+								  <div class="icon">
+									<div class="icon-shape"></div>
+								  </div>
+								</div>
+								<div class="answercont">
+								  <div class="answer">
+									<ul class="custom-list">
+									  <li></li>
+									  <li></li>
+									  <li></li>
+									  <li></li>
+									  <li></li>
+									  <li></li>
+									  <li></li>
+									</ul>
+								  </div>
+								</div>
+							  </div>
+							  <div class="faq_container">
+								<div class="faq_question">
+								  <div class="faq_question-text">
+									<h3>SVG</h3>
+								  </div>
+								  <div class="icon">
+									<div class="icon-shape"></div>
+								  </div>
+								</div>
+								<div class="answercont">
+								  <div class="answer">
+									  <p>Imágenes que se pueden manipular con códigos. 
+										Pero para que se entienda mejor, explico abajo como funciona:<br>
+										Las imágenes "SVG (Scalable Vector Graphics)" son un tipo de imagen vectorial que se guarda en formato "XML (Extensible Markup Language)".<br>
+                                        Pero… ¿Qué son los vectores? Los vectores son imágenes creadas a partir de ecuaciones matemáticas en lugar de píxeles. Estas ecuaciones describen 
+										formas geométricas como líneas, curvas y polígonos. Gracias a este enfoque, las imágenes vectoriales pueden ser manipuladas con precisión mediante código sin perder calidad</p>
+								  </div>
+								</div>
+							  </div>
+						  </div>
+						  
+						
+						
 					</div>
 
 
@@ -91,139 +306,87 @@ import Card from '../components/header.astro';
 </Layout>
 
 <style>
-	/* .foto-container {
-        width: 300px;
-        height: 300px;
-		transform: translateY(50%); 
-		left: 50px; 
-        bottom: 10%; 
-        position: relative;
-        overflow: hidden; 
-        border-radius: 50%;
-    } */
-    /* .border {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 5px solid transparent;
-        border-top-color: #fff; 
-        border-bottom-color: #fff; 
-        border-radius: 50%;
-        animation: borderMove 6s linear infinite; 
-    } */
-	/* .PerF {
-		width: 300px;
-		height: 300px;
-		border-radius: 50%;
-	} */
-
-
-/* .contenedor {
-    display: grid;
-    grid-template-columns: 1fr 1fr;;
-    grid-gap: 20px;
-} */
-/* .descripcion {
-    max-width: 350px; 
-    position: relative;
-    box-sizing: border-box; 
-    margin-left: 380px; 
-	top: -180px
-} */
-
-
-
-
-/* .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-} */
-/* .modal-contenido {
-    background-color: #000000c2;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #ffffff;
-    width: 50%;
-} */
-/* .cerrar-modal {
-    color: #ffffff;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-.cerrar-modal:hover,
-.cerrar-modal:focus {
-    color: rgb(173, 115, 166);
-    text-decoration: none;
-    cursor: pointer;
-} */
-/* .leer-mas {
-    color: rgb(173, 115, 166);
-    cursor: pointer;
-} */
-
-
-/* .herramientas {
-    grid-column: 2 / span 1; 
-    position: relative;
-	text-align: center;
-	top: -180px;
-	height: auto;
-} */
-
-/* .grid-imagenes {
-    display: grid;
-    grid-template-columns: repeat(3, 120px);  
-	margin-left: 25%; 
-	margin-top: 25px;
-} */
-
-/* .imagen.herra {
-    width: 80px; 
-    height: auto; 
-} */
-
-
-
-/* .herramientas2 {
-    grid-column: 2 / span 1; 
-    position: relative;
-    text-align: center;
-    top: -180px;
-} */
-/* .grid-imagenes2 {
-    display: grid;
-    grid-template-columns: repeat(2, 120px); 
-	margin-left: 35%; 
-} */
-
-/* .imagen2.herra2 {
-    width: 80px; 
-    height: auto; 
-}
-
-
-.imagen.herra,
-.imagen2.herra2 {
-    width: 80px;
-    height: auto;
-    transition: transform 0.3s ease; 
-}
-
-.imagen.herra:hover,
-.imagen2.herra2:hover {
-    transform: scale(1.2); 
-} */
-
-
+	#Herramientas {
+		height: 800px;
+	}
+.faq_container { 
+	border-bottom: 2px solid #fff;
 	
+}
+.faq_question {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.answercont {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.answer {
+  padding: 0 10px 20px;
+  line-height: 1.5rem;
+}
+.fqa_headline_container h2 span { font-weight: 700; }
+.faq_question-text h3 { font-size: 22px; }
+
+.icon.active {
+  background: transparent;
+  border: 2px solid #fff;
+}
+.icon:hover { cursor: pointer; }
+.icon-shape { position: relative; width: 50px; height: 50px; }
+.icon .icon-shape::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
+.icon .icon-shape::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 30px;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
+.icon .icon-shape.active::before {
+  transform: translate(-50%, -50%) rotate(180deg);
+  transition: all 0.5s ease;
+}
+.icon .icon-shape.active::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: all 0.5s ease;
+}
+
+
+
+.custom-list {
+      list-style: none; /* Oculta los puntos predeterminados de la lista */
+      padding-left: 1.5em; /* Ajusta el espacio para los puntos */
+    }
+
+    .custom-list li:before {
+      content: "\2022"; /* Código del carácter de punto (•) */
+      color: rgb(173 115 166); /* Color de los puntos */
+      font-weight: bold; /* Ajusta el grosor de los puntos */
+      display: inline-block; /* Permite que los puntos se muestren en línea */
+      width: 1em; /* Ancho de los puntos */
+      margin-left: -1.5em; /* Ajusta la posición de los puntos para alinearlos con el texto */
+    }
 </style> 
