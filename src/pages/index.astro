@@ -41,8 +41,8 @@ import Layout from '../layouts/Layout.astro';
 				<div class="absolute w-full h-full animate-[borderMove_6s_linear_infinite] rounded-[50%] border-y-white border-[5px] border-solid border-transparent left-0 top-0 "></div>
 					<img class="w-300 h-300 rounded-full" src="/public/img/Fotp.webp">
 			</div>
-					<div class="grid grid-cols-[1fr_1fr] gap-5 h-[350px]">
-						<div class="max-w-[350px] relative box-border top-[-180px] ml-[380px]">
+					<div class="grid grid-cols-[1fr_1fr] gap-5 h-[350px] Bres">
+						<div class="max-w-[350px] relative box-border top-[-180px] ml-[380px] image-wrapper">
 							<p>Bienvenidos/as a Código en la Oscuridad, donde el arte y la programación se fusionan en un mundo tenebroso y fascinante. <a href="#modal-contenido" class="leer-mas text-custom-purple-500 cursor-pointer">Leer más</a></p>
 						</div>
 						<div id="modal-biografia" class="hidden fixed z-[1] w-full h-full overflow-auto bg-[rgba(0,0,0,0.5)] left-0 top-0">
@@ -53,9 +53,9 @@ import Layout from '../layouts/Layout.astro';
 								Mi fortaleza reside en el desarrollo front-end, donde puedo dar vida a mis visiones con habilidad y precisión. Sin embargo, también aspiro a adentrarme en el apasionante mundo de la ciberseguridad, donde espero aplicar mis habilidades para proteger y asegurar el mundo digital.</p>
 							</div>
 						</div>
-						<div class="col-[2_/_span_1] relative text-center top-[-180px] h-auto">
+						<div class="col-[2_/_span_1] relative text-center top-[-180px] h-auto BHrespon">
 							<h2>Herramientas que sé usar</h2>
-							<div class="grid grid-cols-[repeat(3,120px)] ml-[25%] mt-[25px]">
+							<div class="grid grid-cols-[repeat(3,120px)] ml-[25%] mt-[25px] BHresponlog">
 								<div class="group w-20 h-auto transition-transform ease-in-out duration-300 transform hover:scale-125"><a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank"><img src="/public/img/HTML.webp"></a></div>
 								<div class="group w-20 h-auto transition-transform ease-in-out duration-300 transform hover:scale-125"><a href="https://developer.mozilla.org/es/docs/Web/CSS" target="_blank"><img src="/public/img/css.webp"></a></div>
 								<div class="group w-20 h-auto transition-transform ease-in-out duration-300 transform hover:scale-125"><a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank"><img src="/public/img/js.webp"></a></div>
@@ -64,14 +64,27 @@ import Layout from '../layouts/Layout.astro';
 								<div class="group w-20 h-auto transition-transform ease-in-out duration-300 transform hover:scale-125"><a href="https://docs.astro.build/en/getting-started/" target="_blank"><img src="/public/img/Astro.webp"></a></div>
 							</div>
 						</div>
-						<div class="col-[2_/_span_1] relative text-center top-[-180px]">
+						<div class="col-[2_/_span_1] relative text-center top-[-180px] BHrespon2">
 							<h2>Herramientas que estoy aprendiendo</h2>
-							<div class="grid grid-cols-[repeat(2,120px)] ml-[35%]">
+							<div class="grid grid-cols-[repeat(2,120px)] ml-[35%] BHrespon2log">
 								<div class="group w-20 h-auto transition-transform ease-in-out duration-300 transform hover:scale-125"><a href="https://developer.mozilla.org/es/docs/Web/SVG" target="_blank"><img src="/public/img/svg.webp"></a></div>
 								<div class="group w-20 h-auto transition-transform ease-in-out duration-300 transform hover:scale-125"><a href="https://animejs.com/documentation/" target="_blank"><img src="/public/img/animejs.webp"></a></div>
 							</div>
 						</div>
 					</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+					
 
 					<div id="Herramientas" class="bg-her-hero bg-cover bg-center bg-fixed">
 						<div class="mx-auto px-20 py-5  ">
@@ -484,14 +497,12 @@ import Layout from '../layouts/Layout.astro';
 #carousel div.nextRightSecond .cards {
 	width: 200px;
 }
-
 #carousel div.prev,
 #carousel div.next,
 #carousel div.prevLeftSecond,
 #carousel div.nextRightSecond {
 	opacity: 0.1; 
 }
-
 #carousel div.selected {
 	opacity: 1; 
 }
@@ -506,7 +517,88 @@ import Layout from '../layouts/Layout.astro';
     transform: translateX(-50%);
 } */
 
+@media screen and (max-width: 768px) {
+.Bres,
+.BHrespon,
+.BHresponlog,
+.BHrespon2,
+.BHrespon2log {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
 
+/* .BHrespon,
+.BHrespon2 {
+    margin-top: 0px;
+} */
+
+.BHresponlog,
+.BHrespon2log {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    
+}
+
+}
+
+
+    
+
+	/* .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  height: 350px;
+} */
+
+/* .presentacion {
+  max-width: 350px;
+  position: relative;
+  box-sizing: border-box;
+  top: -180px;
+  margin-left: 380px;
+} */
+
+/* .Her {
+  grid-column: span 1 / span 2;
+  position: relative;
+  text-align: center;
+  top: -180px;
+  height: auto;
+}
+.Herra {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  margin-left: 25%;
+  margin-top: 25px;
+} */
+
+/* .ImgH {
+  width: 20px;
+  height: auto;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 300ms;
+}
+
+.ImgH:hover {
+  transform: scale1.
+} */
+
+/* .Her2 {
+  grid-column: span 1 / span 2;
+  position: relative;
+  text-align: center;
+  top: -180px;
+}
+.Herra2 {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  margin-left: 35%;
+} */
 
 
 
